@@ -78,13 +78,13 @@ body {
 
 @media (max-width: 600px) {
     #message {
-        padding: 16px;
+        padding: 16px 16px 16px 60px;
         font-size: 26px;
     }
 
     #spark {
-        top: 12px;
+        top: 17px;
         left: 14px;
-        font-size: 24px;
+        font-size: 22px;
     }
 }
