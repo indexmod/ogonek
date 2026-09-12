@@ -2,52 +2,26 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-    <title>ogonek</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Огонёк</title>
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23008080'/%3E%3Ctext x='50' y='72' text-anchor='middle' font-size='72' fill='white'%3E✦%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="window">
+<main>
+    <textarea
+        id="message"
+        spellcheck="false"
+        autocomplete="off"
+        autocorrect="off"
+        autocapitalize="off"
+    ></textarea>
+</main>
 
-    <div class="titlebar">
-        <span>ogonek</span>
-        <div class="window-buttons">
-            <button>_</button>
-            <button>□</button>
-            <button>×</button>
-        </div>
-    </div>
-
-    <div class="menu">
-        <span>File</span>
-        <span>Edit</span>
-        <span>View</span>
-        <span>Help</span>
-    </div>
-
-    <main>
-        <textarea
-            id="message"
-            spellcheck="false"
-            autocomplete="off"
-            autocorrect="off"
-            autocapitalize="off"
-            placeholder=""
-        ></textarea>
-    </main>
-
-    <div class="statusbar">
-        <span id="status">connecting...</span>
-        <span>ogonek</span>
-    </div>
-
-</div>
-
-<script type="module" src="app.js"></script>
+<script src="app.js"></script>
 
 </body>
 </html>
