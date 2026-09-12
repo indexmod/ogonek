@@ -65,11 +65,12 @@ async function saveMessage() {
         }
 
         lastServerValue = value;
-
         status.textContent = "online";
+
     } catch (error) {
         console.error(error);
         status.textContent = "offline";
+
     } finally {
         isSaving = false;
     }
