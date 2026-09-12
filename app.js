@@ -1,4 +1,4 @@
-const API_URL = "https://YOUR-BACKEND-URL";
+const API_URL = "https://ogonek.wiki-self.workers.dev";
 
 const message = document.getElementById("message");
 const status = document.getElementById("status");
