@@ -24,7 +24,7 @@ body {
     height: 100%;
 
     margin: 0;
-    padding: 24px;
+    padding: 24px 24px 24px 58px;
 
     background: transparent;
     color: #ffffff;
@@ -48,8 +48,8 @@ body {
 
 #spark {
     position: fixed;
-    top: 18px;
-    left: 20px;
+    top: 24px;
+    left: 12px;
 
     z-index: 10;
 
