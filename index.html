@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>ogonek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="window">
+
+    <div class="titlebar">
+        <span>ogonek</span>
+        <div class="window-buttons">
+            <button>_</button>
+            <button>□</button>
+            <button>×</button>
+        </div>
+    </div>
+
+    <div class="menu">
+        <span>File</span>
+        <span>Edit</span>
+        <span>View</span>
+        <span>Help</span>
+    </div>
+
+    <main>
+        <textarea
+            id="message"
+            spellcheck="false"
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="off"
+            placeholder=""
+        ></textarea>
+    </main>
+
+    <div class="statusbar">
+        <span id="status">connecting...</span>
+        <span>ogonek</span>
+    </div>
+
+</div>
+
+<script type="module" src="app.js"></script>
+
+</body>
+</html>
