@@ -1,7 +1,6 @@
 const API_URL = "https://ogonek.wiki-self.workers.dev";
 
 const message = document.getElementById("message");
-const status = document.getElementById("status");
 
 let saveTimer = null;
 let lastServerValue = "";
@@ -9,8 +8,6 @@ let isSaving = false;
 
 async function loadMessage() {
     try {
-        status.textContent = "loading...";
-
         const response = await fetch(`${API_URL}/message`, {
             method: "GET",
             cache: "no-store"
@@ -27,11 +24,8 @@ async function loadMessage() {
         if (document.activeElement !== message) {
             message.value = lastServerValue;
         }
-
-        status.textContent = "online";
     } catch (error) {
         console.error(error);
-        status.textContent = "offline";
     }
 }
 
@@ -48,7 +42,6 @@ async function saveMessage() {
 
     try {
         isSaving = true;
-        status.textContent = "saving...";
 
         const response = await fetch(`${API_URL}/message`, {
             method: "PUT",
@@ -65,11 +58,9 @@ async function saveMessage() {
         }
 
         lastServerValue = value;
-        status.textContent = "online";
 
     } catch (error) {
         console.error(error);
-        status.textContent = "offline";
 
     } finally {
         isSaving = false;
@@ -77,8 +68,6 @@ async function saveMessage() {
 }
 
 message.addEventListener("input", () => {
-    status.textContent = "editing...";
-
     clearTimeout(saveTimer);
 
     saveTimer = setTimeout(() => {
